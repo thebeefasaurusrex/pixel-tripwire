@@ -17,8 +17,8 @@ def inspect(paths, flat_cutoff, magenta_cutoff):
             image = source.convert("RGB")
         digest = (image.size, sha256(image.tobytes()).hexdigest())
         sample = image.resize((min(160, image.width), min(160, image.height)), Image.Resampling.NEAREST)
-        pixels = list(sample.getdata())
-        spread = pstdev(sample.convert("L").getdata())
+        pixels = sample.get_flattened_data()
+        spread = pstdev(sample.convert("L").get_flattened_data())
         magenta = sum(r > 210 and g < 60 and b > 210 for r, g, b in pixels) / len(pixels)
         flags = []
         if spread < flat_cutoff:
