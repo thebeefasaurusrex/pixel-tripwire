@@ -1,0 +1,2 @@
+{"frame_id": "normal", "phase": "play"}
+{"frame_id": "fault", "phase": "play", "planted": {"type": "magenta"}}

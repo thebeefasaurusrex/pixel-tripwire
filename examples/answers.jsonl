@@ -1,0 +1,2 @@
+{"frame": "normal", "key": "normal", "answerer": "demo", "job": "J2", "variant": "base", "seconds": 0, "value": {"broken": false, "suspicion": 0}}
+{"frame": "fault", "key": "fault", "answerer": "demo", "job": "J2", "variant": "base", "seconds": 0, "value": {"broken": true, "suspicion": 1}}
